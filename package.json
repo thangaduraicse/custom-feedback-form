@@ -4,7 +4,7 @@
   "description": "POC on react app using react, redux-form and redux-promise-middleware",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "start": "webpack serve --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },
   "repository": {
@@ -66,6 +66,6 @@
     "terser-webpack-plugin": "^5.0.3",
     "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^4.0.0-beta.0"
   }
 }

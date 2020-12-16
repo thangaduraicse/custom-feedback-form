@@ -9,26 +9,14 @@ const DEV_PORT = '8090';
 module.exports = () => ({
   context: __dirname,
   devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    clientLogLevel: 'error',
     compress: true,
-    contentBase: __dirname,
-    disableHostCheck: true,
     historyApiFallback: true,
     hot: true,
     overlay: true,
-    port: DEV_PORT,
-    progress: true,
-    stats: 'minimal',
-    watchOptions: {
-      aggregateTimeout: 1000,
-      ignored: /node_modules/,
-      poll: true
-    }
+    port: DEV_PORT
   },
   devtool: 'eval-cheap-module-source-map',
   entry: [
-    `webpack-dev-server/client?http://localhost:${DEV_PORT}`,
     'webpack/hot/only-dev-server',
     '@babel/polyfill',
     'classlist-polyfill',
@@ -85,7 +73,8 @@ module.exports = () => ({
       ReactDOM: 'react-dom'
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'template.html')
+      template: path.resolve(__dirname, 'src', 'template.html'),
+      inject: 'body'
     }),
     new CircularDependencyPlugin({
       exclude: /node_modules/,
