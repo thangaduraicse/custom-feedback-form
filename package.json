@@ -1,0 +1,26 @@
+{
+  "name": "custom-feedback-form",
+  "version": "1.0.0",
+  "description": "POC on react app using react, redux-form and redux-promise-middleware",
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thangaduraicse/custom-feedback-form.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "redux-form",
+    "redux-promise-middleware",
+    "webpack",
+    "webpack-dev-server"
+  ],
+  "author": "Thangadurai Nainamalai <duraithanga3@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thangaduraicse/custom-feedback-form/issues"
+  },
+  "homepage": "https://github.com/thangaduraicse/custom-feedback-form#readme"
+}
