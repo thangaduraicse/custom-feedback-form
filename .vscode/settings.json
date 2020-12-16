@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [
+    80, 100, 120
+  ],
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/node_cache*": true,
+    "**/node_modules*": true
+  },
+  "files.trimTrailingWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": false
+}
