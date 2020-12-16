@@ -29,7 +29,7 @@ module.exports = () => ({
       ],
       dependOn: 'polyfills'
     },
-    entry: {
+    app: {
       import: [
         path.resolve(__dirname, "src"),
         path.resolve(__dirname, "src", "scss", "main.scss")
