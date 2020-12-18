@@ -10,32 +10,10 @@ module.exports = () => ({
   context: __dirname,
   entry: {
     polyfills: ['@babel/polyfill', 'classlist-polyfill'],
-    vendors: {
-      import: [
-        'axios',
-        'history',
-        'immutable',
-        'moment',
-        'prop-types',
-        'query-string',
-        'react',
-        'react-dom',
-        'react-redux',
-        'react-router-dom',
-        'redux',
-        'redux-form',
-        'redux-immutable',
-        'redux-promise-middleware'
-      ],
-      dependOn: 'polyfills'
-    },
-    app: {
-      import: [
-        path.resolve(__dirname, "src"),
-        path.resolve(__dirname, "src", "scss", "main.scss")
-      ],
-      dependOn: 'vendors'
-    }
+    app: [
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "src", "scss", "main.scss")
+    ]
   },
   mode: "production",
   module: {
@@ -100,7 +78,29 @@ module.exports = () => ({
           safari10: true
         }
       })
-    ]
+    ],
+    splitChunks: {
+      automaticNameDelimiter: '-',
+      chunks: 'all',
+      enforceSizeThreshold: 50000,
+      maxAsyncRequests: Infinity,
+      maxInitialRequests: Infinity,
+      minSize: 20000,
+      maxSize: 0,
+      cacheGroups: {
+        defaultVendors: {
+          name: 'vendor',
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          reuseExistingChunk: true
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
   output: {
     filename: "[name].bundle.js",
