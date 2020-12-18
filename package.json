@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --config webpack.config.dev.js",
     "build": "npm run clean && webpack --config webpack.config.prod.js",
-    "clean": "rm -rf public/!(demo.html)"
+    "clean": "find public/* -type f,d ! -name 'demo.html' -delete"
   },
   "repository": {
     "type": "git",
