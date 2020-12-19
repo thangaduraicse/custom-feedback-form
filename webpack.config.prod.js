@@ -49,7 +49,10 @@ module.exports = () => ({
       "node_modules",
       path.resolve(__dirname, "src")
     ],
-    symlinks: false
+    symlinks: false,
+    alias: {
+      'Components': path.resolve(__dirname, 'src', 'components')
+    }
   },
   optimization: {
     minimize: true,

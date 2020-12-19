@@ -17,6 +17,7 @@ module.exports = () => ({
   },
   devtool: 'eval-cheap-module-source-map',
   entry: [
+    'react-hot-loader/patch',
     'webpack/hot/only-dev-server',
     '@babel/polyfill',
     'classlist-polyfill',
@@ -57,7 +58,10 @@ module.exports = () => ({
       'node_modules',
       path.resolve(__dirname, 'src')
     ],
-    symlinks: false
+    symlinks: false,
+    alias: {
+      'Components': path.resolve(__dirname, 'src', 'components')
+    }
   },
   output: {
     filename: 'bundle.js',
