@@ -22,9 +22,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-// import { hot } from 'react-hot-loader/root';
-// const App = () => <div>Hello Wo!</div>;
-// const ComponentY = hot(App);
-
-// ReactDOM.render(<ComponentY />, document.getElementById('root'));
