@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+
+  &-left {
+    min-width: 0%;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+
+    .content-area {
+      flex: 1 1;
+    }
+  }
+}
