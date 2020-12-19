@@ -12,6 +12,7 @@ module.exports = () => ({
     compress: true,
     historyApiFallback: true,
     hot: true,
+    liveReload: false,
     overlay: true,
     port: DEV_PORT
   },
@@ -60,6 +61,7 @@ module.exports = () => ({
     ],
     symlinks: false,
     alias: {
+      'react-dom': '@hot-loader/react-dom',
       'Components': path.resolve(__dirname, 'src', 'components')
     }
   },
