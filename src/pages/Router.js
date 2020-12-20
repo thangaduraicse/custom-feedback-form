@@ -9,6 +9,34 @@ const ReactRouter5 = () => (
       render={ routerProps => <PersonalDetails {...routerProps} /> }
     />
     <Route
+      path='/current-address'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/previous-address'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/income'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/expense'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/products'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/review-confirm'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
+      path='/thanks'
+      render={ routerProps => <PersonalDetails {...routerProps} /> }
+    />
+    <Route
       render={
         () => (
           <div>
