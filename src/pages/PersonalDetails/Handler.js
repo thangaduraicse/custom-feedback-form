@@ -1,3 +1,13 @@
-const PersonalDetails = () => (<h1>Persona1 details pages comes here</h1>);
+import PersonalDetailsContainer from './Container';
 
-export default PersonalDetails;
+const PersonalDetailsHandler = () => {
+  const onSubmit = values => {
+    console.log('Form value: -->', values);
+  }
+
+  return (
+    <PersonalDetailsContainer onSubmit={onSubmit}/>
+  );
+};
+
+export default PersonalDetailsHandler;

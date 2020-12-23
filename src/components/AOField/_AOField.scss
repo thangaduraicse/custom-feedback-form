@@ -1,0 +1,30 @@
+.components-ao-field {
+  padding-bottom: 24px;
+
+  label, .small-print {
+    display: flex;
+    padding-bottom: 4px;
+  }
+
+  .small-print {
+    font-size: 12px;
+  }
+
+  .input-field {
+    max-width: 240px;
+
+    input {
+      display: flex;
+      width: 100%;
+      line-height: 36px;
+      font-size: 16px;
+      padding: 0 8px;
+      border-radius: 0;
+      border: 1px solid #ccc;
+
+      &:focus {
+        border-color: blue;
+      }
+    }
+  }
+}
