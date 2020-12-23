@@ -1,6 +1,8 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 14px;
+  background: skyblue;
+  height: 32px;
 
   .menu-bars svg {
     color: #000 !important;
