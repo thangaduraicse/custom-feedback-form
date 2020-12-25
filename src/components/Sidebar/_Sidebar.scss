@@ -41,7 +41,11 @@
       padding: 0 16px;
       border-radius: 4px;
 
-      &:hover {
+      &:hover:not(.active) {
+        background-color: #5ea8ff;
+      }
+
+      &.active {
         background-color: #1a83ff;
       }
 

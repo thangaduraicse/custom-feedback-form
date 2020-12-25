@@ -1,6 +1,6 @@
 const Header = () => (
   <header>
-    <h1>Feedback Form</h1>
+    <h1>Register Form</h1>
   </header>
 );
 

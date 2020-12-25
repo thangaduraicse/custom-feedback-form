@@ -1,5 +1,9 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
 import PersonalDetails from './PersonalDetails/Handler';
+import CurrentAddress from './CurrentAddress/Handler';
+import PreviousAddress from './PreviousAddress/Handler';
+import MonthlyIncome from './MonthlyIncome/Handler';
+import MonthlyExpenses from './MonthlyExpenses/Handler';
 
 const ReactRouter5 = () => (
   <Switch>
@@ -10,19 +14,19 @@ const ReactRouter5 = () => (
     />
     <Route
       path='/current-address'
-      render={ routerProps => <PersonalDetails {...routerProps} /> }
+      render={ routerProps => <CurrentAddress {...routerProps} /> }
     />
     <Route
       path='/previous-address'
-      render={ routerProps => <PersonalDetails {...routerProps} /> }
+      render={ routerProps => <PreviousAddress {...routerProps} /> }
     />
     <Route
       path='/income'
-      render={ routerProps => <PersonalDetails {...routerProps} /> }
+      render={ routerProps => <MonthlyIncome {...routerProps} /> }
     />
     <Route
-      path='/expense'
-      render={ routerProps => <PersonalDetails {...routerProps} /> }
+      path='/expenses'
+      render={ routerProps => <MonthlyExpenses {...routerProps} /> }
     />
     <Route
       path='/products'

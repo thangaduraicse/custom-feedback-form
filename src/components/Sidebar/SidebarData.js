@@ -27,7 +27,7 @@ export const SidebarData = [
   },
   {
     title: 'Monthly Expenses',
-    path: '/expense',
+    path: '/expenses',
     icon: <FcIcons.FcBearish />,
     className: 'nav-text'
   },

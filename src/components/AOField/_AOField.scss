@@ -25,6 +25,10 @@
       &:focus {
         border-color: blue;
       }
+
+      &[type="date"] {
+       text-transform: uppercase; 
+      }
     }
   }
 }

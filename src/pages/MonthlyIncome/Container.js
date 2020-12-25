@@ -2,7 +2,7 @@ import React from 'react';
 import { reduxForm } from 'redux-form';
 import { AOButton, AOField } from 'Components';
 
-let PersonalDetailsContainer = props => {
+let MonthlyIncomeContainer = props => {
   const { handleSubmit } = props;
 
   return (
@@ -22,8 +22,8 @@ let PersonalDetailsContainer = props => {
       />
       <AOField
         id="dob"
+        hint="MM/DD/YYYY"
         label="Date of Birth"
-        type="date"
       />
       <AOField
         id="phone"
@@ -40,13 +40,13 @@ let PersonalDetailsContainer = props => {
   );
 }
 
-PersonalDetailsContainer.propTypes = {
+MonthlyIncomeContainer.propTypes = {
   handleSubmit: PropTypes.func
 };
 
-PersonalDetailsContainer = reduxForm({
-  form: 'personalDetails',
+MonthlyIncomeContainer = reduxForm({
+  form: 'monthlyIncome',
   destroyOnUnmount: false
-})(PersonalDetailsContainer);
+})(MonthlyIncomeContainer);
 
-export default PersonalDetailsContainer;
+export default MonthlyIncomeContainer;
