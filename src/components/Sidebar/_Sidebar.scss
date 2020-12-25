@@ -56,11 +56,13 @@
   }
 
   .navbar-toggle {
-    background-color: #060b26;
+    color: #fff;
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    font-size: 28px;
+    border-bottom: 2px solid;
   }
 }
