@@ -1,19 +1,17 @@
 export default schema => values => {
-  const result = schema.validate(values, { abortEarly: false });
+  const errors = {},
+        result = schema.validate(values, { abortEarly: false });
   
-  if (result.error === null) {
-    return {};
+  if (result.error !== null) {
+    result.error.details.map(cur => {
+      const path = cur.path[cur.path.length - 1],
+            message = cur.message;
+  
+      errors[path]
+        && (errors[path] += message)
+        || (errors[path] = message);
+    });
   }
 
-  return result.error.details.reduce((all, cur) => {
-    const allErrors = Object.assign({}, all),
-          path = cur.path[cur.path.length - 1],
-          message = cur.message;
-    
-    Object.prototype.hasOwnProperty.call(allErrors, path)
-      && (allErrors[path] += message)
-      || (allErrors[path] = message);
-
-    return allErrors;
-  }, {});
+  return errors;
 };
