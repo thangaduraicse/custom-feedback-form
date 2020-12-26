@@ -1,6 +1,6 @@
 import React from 'react';
 import { reduxForm, Form } from 'redux-form';
-import { AOButton, AOField } from 'Components';
+import { AOButton, AOInput } from 'Components';
 import { createJoiValidator } from 'Utils';
 import schema from './schema.joi';
 
@@ -9,30 +9,30 @@ let PersonalDetailsContainer = props => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <AOField
+      <AOInput
         id="firstName"
         label="First Name"
       />
-      <AOField
+      <AOInput
         id="middleName"
         hint="Enter if you have any"
         label="Middle Name"
       />
-      <AOField
+      <AOInput
         id="lastName"
         label="Last Name"
       />
-      <AOField
+      <AOInput
         id="dob"
         label="Date of Birth"
         type="date"
       />
-      <AOField
+      <AOInput
         id="phone"
         label="Contact Number"
         type="tel"
       />
-      <AOField
+      <AOInput
         id="email"
         label="Email Address"
         type="email"

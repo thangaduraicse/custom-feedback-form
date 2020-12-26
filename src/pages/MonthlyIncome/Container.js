@@ -1,36 +1,36 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
-import { AOButton, AOField } from 'Components';
+import { AOButton, AOInput } from 'Components';
 
 let MonthlyIncomeContainer = props => {
   const { handleSubmit } = props;
 
   return (
     <form onSubmit={handleSubmit}>
-      <AOField
+      <AOInput
         id="firstName"
         label="First Name"
       />
-      <AOField
+      <AOInput
         id="middleName"
         hint="Enter if you have any"
         label="Middle Name"
       />
-      <AOField
+      <AOInput
         id="lastName"
         label="Last Name"
       />
-      <AOField
+      <AOInput
         id="dob"
         hint="MM/DD/YYYY"
         label="Date of Birth"
       />
-      <AOField
+      <AOInput
         id="phone"
         label="Contact Number"
         type="tel"
       />
-      <AOField
+      <AOInput
         id="email"
         label="Email Address"
         type="email"

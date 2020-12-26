@@ -1,42 +1,42 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
-import { AOButton, AOField } from 'Components';
+import { AOButton, AOInput } from 'Components';
 
 let CurrentAddressContainer = props => {
   const { handleSubmit } = props;
 
   return (
     <form onSubmit={handleSubmit}>
-      <AOField
+      <AOInput
         id="flatNumber"
         className="flat-number"
         label="Flat/Door No."
       />
-      <AOField
+      <AOInput
         id="addressLine1"
         label="Address Line 1"
       />
-      <AOField
+      <AOInput
         id="addressLine2"
         label="Address Line 2"
       />
-      <AOField
+      <AOInput
         id="city"
         label="City"
       />
-      <AOField
+      <AOInput
         id="state"
         label="State"
       />
-      <AOField
+      <AOInput
         id="county"
         label="Country"
       />
-      <AOField
+      <AOInput
         id="postcode"
         label="Postcode"
       />
-      <AOField
+      <AOInput
         id="moveInDate"
         label="Move in Date"
         type="date"
