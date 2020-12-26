@@ -72,6 +72,7 @@ module.exports = () => ({
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({ DEBUG: true }),
     new webpack.ProvidePlugin({
       axios: 'axios',
       moment: 'moment',

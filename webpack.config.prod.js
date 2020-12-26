@@ -119,6 +119,7 @@ module.exports = () => ({
       React: "react",
       ReactDOM: "react-dom"
     }),
+    new webpack.DefinePlugin({ DEBUG: false }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "template.html"),
       inject: "body"
