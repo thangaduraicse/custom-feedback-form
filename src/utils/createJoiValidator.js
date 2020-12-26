@@ -3,7 +3,7 @@ export default schema => values => {
         result = schema.validate(values, { abortEarly: false });
   
   if (result.error !== null) {
-    result.error.details.map(cur => {
+    result.error.details.forEach(cur => {
       const path = cur.path[cur.path.length - 1],
             message = cur.message;
   
