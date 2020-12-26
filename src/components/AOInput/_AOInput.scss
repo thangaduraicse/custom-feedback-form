@@ -31,4 +31,20 @@
       }
     }
   }
+
+  &.error {
+    color: red;
+
+    label {
+      font-weight: bold;
+    }
+
+    .input-field input {
+      border-color: red;
+    }
+
+    .error-message {
+      margin-top: 4px;
+    }
+  }
 }
