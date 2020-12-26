@@ -51,7 +51,8 @@ module.exports = () => ({
     ],
     symlinks: false,
     alias: {
-      'Components': path.resolve(__dirname, 'src', 'components')
+      'Components': path.resolve(__dirname, 'src', 'components'),
+      'Utils': path.resolve(__dirname, 'src', 'utils')
     }
   },
   optimization: {

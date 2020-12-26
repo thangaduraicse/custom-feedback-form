@@ -1,12 +1,14 @@
 import React from 'react';
-import { reduxForm } from 'redux-form';
+import { reduxForm, Form } from 'redux-form';
 import { AOButton, AOField } from 'Components';
+import { createJoiValidator } from 'Utils';
+import schema from './schema.joi';
 
 let PersonalDetailsContainer = props => {
   const { handleSubmit } = props;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
       <AOField
         id="firstName"
         label="First Name"
@@ -36,7 +38,7 @@ let PersonalDetailsContainer = props => {
         type="email"
       />
       <AOButton buttonText="Continue" />
-    </form>
+    </Form>
   );
 }
 
@@ -46,7 +48,8 @@ PersonalDetailsContainer.propTypes = {
 
 PersonalDetailsContainer = reduxForm({
   form: 'personalDetails',
-  destroyOnUnmount: false
+  destroyOnUnmount: false,
+  validate: createJoiValidator(schema)
 })(PersonalDetailsContainer);
 
 export default PersonalDetailsContainer;

@@ -62,7 +62,8 @@ module.exports = () => ({
     symlinks: false,
     alias: {
       'react-dom': '@hot-loader/react-dom',
-      'Components': path.resolve(__dirname, 'src', 'components')
+      'Components': path.resolve(__dirname, 'src', 'components'),
+      'Utils': path.resolve(__dirname, 'src', 'utils')
     }
   },
   output: {
