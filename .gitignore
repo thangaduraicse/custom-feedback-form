@@ -3,6 +3,7 @@ temp
 node_modules*
 node_cache*
 npm*
+db.json
 
 public/*
 !public/demo.html
