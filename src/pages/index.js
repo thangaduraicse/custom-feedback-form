@@ -1,9 +1,20 @@
 import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Footer, Header, Sidebar } from 'Components';
 import ReactRouter5 from './Router';
+import { showLoader } from '../redux/actions';
 
 const Pages = () => {
-  const loader = true;
+  const { loader } = useSelector(state => state.loaderReducer),
+        dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(showLoader(true));
+
+    setTimeout(() => {
+      dispatch(showLoader(false));
+    }, 5000);
+  }, []);
 
   if (loader) {
     return (
