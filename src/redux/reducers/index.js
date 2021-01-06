@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import loaderReducer from './loader';
+import applicationReducer from './application';
 
 export default combineReducers({
   form: formReducer,
-  loaderReducer
+  applicationReducer
 });

@@ -2,21 +2,29 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Footer, Header, Sidebar } from 'Components';
 import ReactRouter5 from './Router';
-import { showLoader } from '../redux/actions';
+import { createApplication, retrieveApplicationById } from '../redux/actions';
+
+const LOCALSTORAGE_APPLICATION_ID = 'custom_feedback_application_id';
 
 const Pages = () => {
-  const { loader } = useSelector(state => state.loaderReducer),
+  const { loading, applicationData } = useSelector(state => state.applicationReducer),
         dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(showLoader(true));
+    const applicationId = window.localStorage.getItem(LOCALSTORAGE_APPLICATION_ID);
 
-    setTimeout(() => {
-      dispatch(showLoader(false));
-    }, 5000);
+    applicationId
+      && dispatch(retrieveApplicationById(applicationId))
+      || dispatch(createApplication());
   }, []);
 
-  if (loader) {
+  useEffect(() => {
+    applicationData.id && (
+      window.localStorage.setItem(LOCALSTORAGE_APPLICATION_ID, applicationData.id)
+    );
+  }, [applicationData.id]);
+
+  if (loading) {
     return (
       <div className="container loading">
         <section className="container-right">
