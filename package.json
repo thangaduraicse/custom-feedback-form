@@ -34,7 +34,7 @@
     "history": "^5.0.0",
     "immutable": "^4.0.0-rc.12",
     "joi": "^17.3.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.2",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
     "react": "^17.0.1",
